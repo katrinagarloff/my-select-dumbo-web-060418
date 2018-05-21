@@ -2,8 +2,9 @@ def my_select(collection)
 i = 0 
 new_collection = []
 while i < collection.length 
-new_collection.push(yield collection[i])
-i+=1
+if yield collection[i] == true 
+  new_collection.push(collection[i])
+end
 end
 new_collection
 end
